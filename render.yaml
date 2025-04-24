@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: vkitchen
+    env: docker
+    dockerfilePath: Dockerfile
+    buildCommand: composer install --optimize-autoloader --no-dev
+    startCommand: apache2-foreground
+    disk:
+      persistent: false
